@@ -1,17 +1,5 @@
-var express = require('express');
-var app = express();
-
-app.use(express.static('public'));
-app.get('/index', function (req, res) {
-   res.sendFile( __dirname + "/" + "index" );
-})
-
-app.get('/process_get', function (req, res) {
-   // Prepare output in JSON format
-   response = {
-      first_name:req.query.first_name,
-      last_name:req.query.last_name
-   };
-   console.log(response);
-   res.end(JSON.stringify(response));
-})
+function area(i){
+    var l = document.getElementById("v1").value;
+    area = l*l;
+    document.getElementById("after").innerHTML = `The area of the square with length ${l} is ${area}`;
+}

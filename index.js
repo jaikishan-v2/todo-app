@@ -16,7 +16,7 @@ app.get("/area", function (req, res) {
 });
 
 app.get("/perimeter", function (req, res) {
-  res.send(`the perimeter of the square with side length 5 is ${square.perimeter(5)}`);
+  res.render(`perimeter`);
 });
 
 app.listen(port, function () {
